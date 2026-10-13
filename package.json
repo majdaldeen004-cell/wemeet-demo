@@ -1,0 +1,20 @@
+{
+  "name": "wemeet-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "WeMeet — public frontend demo. Extracted from the private WeMeet monorepo; runs on fictional in-browser data with no backend.",
+  "workspaces": [
+    "shared",
+    "web"
+  ],
+  "scripts": {
+    "dev": "npm --workspace @wemeet/web run dev",
+    "build": "npm --workspace @wemeet/web run build",
+    "lint": "npm --workspace @wemeet/web run lint",
+    "type-check": "npm --workspace @wemeet/shared run type-check && npm --workspace @wemeet/web run type-check",
+    "serve": "npx --yes serve web/out --listen 3000"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

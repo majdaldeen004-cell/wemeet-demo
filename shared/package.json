@@ -1,0 +1,16 @@
+{
+  "name": "@wemeet/shared",
+  "version": "1.0.0",
+  "description": "WeMeet shared types, constants, and validators",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.2"
+  }
+}

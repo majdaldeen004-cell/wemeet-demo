@@ -1,0 +1,18 @@
+# dependencies
+node_modules/
+
+# next.js build output
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# environment files — the demo needs none, and none must ever be committed
+.env
+.env.*
+!.env.example
+
+# logs / os noise
+*.log
+npm-debug.log*
+.DS_Store

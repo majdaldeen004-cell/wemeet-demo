@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Cairo — modern professional Arabic/Latin font */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap');
+
+/* Leaflet map CSS */
+@import 'leaflet/dist/leaflet.css';
+
+@layer base {
+  * { box-sizing: border-box; }
+  html {
+    -webkit-tap-highlight-color: transparent;
+    direction: rtl;
+  }
+  body {
+    font-family: 'Cairo', system-ui, 'Segoe UI', sans-serif;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cairo', system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+  input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; }
+  /* Leaflet z-index fix for Next.js */
+  .leaflet-pane { z-index: 400 !important; }
+  .leaflet-top, .leaflet-bottom { z-index: 401 !important; }
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  .font-arabic { font-family: 'Cairo', system-ui, sans-serif; }
+}
